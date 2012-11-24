@@ -30,7 +30,7 @@ Now it's time to scrape some content!
 
 We've written a nodejs scraper. You will need to install the dependencies first:
 
-    npm install cheerio requests
+    npm install cheerio request
 
 Then do:
 
