@@ -28,7 +28,11 @@ You will find the index of files at: <http://files.opented.org.s3.amazonaws.com/
 
 Now it's time to scrape some content!
 
-We've written a nodejs scraper:
+We've written a nodejs scraper. You will need to install the dependencies first:
+
+    npm install cheerio requests
+
+Then do:
 
     node scripts/scraper.js
 
