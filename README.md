@@ -10,7 +10,7 @@ Unstructured cached HTML pages are also in the that DB in a collection called du
 
 Get data out of mongodb:
 
-    mongoexport --host opented.org --db opented --username iacc --password gohack --collection dumps --csv --fields "zhtml,doc_id,timestamp" | head -n 5000 > tmp.csv
+    mongoexport --host opented.org --db opented --username iacc --password gohack --collection dumps --csv --fields "zhtml,doc_id,timestamp" | head -n 5000 > cache/dumps.csv
 
 Then use extract.py:
 
