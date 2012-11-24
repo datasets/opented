@@ -34,7 +34,7 @@ We've written a nodejs scraper. You will need to install the dependencies first:
 
 Then do:
 
-    node scripts/scraper.js
+    node scripts/scrape.js
 
 Data will be written to cache/dumps/{docid}/extracted.json
 
