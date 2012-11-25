@@ -1,4 +1,4 @@
-TODO: some more info
+Processing code and information related to OpenTED (Tenders Electronic Daily).
 
 ## Data Processing Pipeline
 
