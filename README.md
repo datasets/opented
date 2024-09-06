@@ -22,7 +22,7 @@ This will produce a whole bunch of files in `cache/dumps`
 
     s3cmd sync --acl-public cache/dumps/ s3://files.opented.org/scraped/
 
-You will find the index of files at: <http://files.opented.org.s3.amazonaws.com/scraped/index.json>
+You will find the index of files at: http://files.opented.org.s3.amazonaws.com/scraped/index.json
 
 
 ### 2. Scraping content
