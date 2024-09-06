@@ -37,7 +37,7 @@ Then do:
 
     node scripts/scrape.js
 
-Data will be written to cache/dumps/{docid}/extracted.json
+Data will be written to cache/dumps/{"{docid}"}/extracted.json
 
 
 ## Wishlist
