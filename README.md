@@ -1,5 +1,7 @@
 <a href="https://datahub.io/core/opented"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25)" alt="badge" /></a>
 
+<a href="https://datahub.io/core/opented"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25)" alt="badge" /></a>
+
 Processing code and information related to OpenTED (Tenders Electronic Daily).
 
 ## Data Processing Pipeline
