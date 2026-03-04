@@ -4,21 +4,28 @@ var fs = require('fs');
 var path = require('path');
 
 var baseurl = 'http://files.opented.org.s3.amazonaws.com/scraped/';
-indexurl = 'http://files.opented.org.s3.amazonaws.com/scraped/index.json'
+var indexurl = 'http://files.opented.org.s3.amazonaws.com/scraped/index.json'
 var outdir = 'cache/dumps/';
 
 request(indexurl, function(err, resp, body) {
+  if (err) {
+    throw err;
+  }
   var docs = JSON.parse(body);
   var idx = 0;
   var active = [];
-  for (docid in docs) {
-    files = docs[docid];
+  for (var docid in docs) {
+    var files = docs[docid];
     if (files.indexOf('summary') != -1) {
       var url = baseurl + docid + '/summary.html';
       scrapeSummary(url, docid, function(err, data) {
+        if (err) {
+          console.log('Error processing ' + docid + ': ' + err);
+          return;
+        }
         var ouroutdir = outdir + data.docid;
-        if (!path.existsSync(ouroutdir)) {
-          fs.mkdirSync(ouroutdir);
+        if (!fs.existsSync(ouroutdir)) {
+          fs.mkdirSync(ouroutdir, { recursive: true });
         }
         var outpath = ouroutdir + '/extracted.json';
         if (data.finalamount) {
@@ -38,6 +45,10 @@ request(indexurl, function(err, resp, body) {
 
 function scrapeSummary(url, docid, cb) {
   request(url, function(err, resp, body){
+    if (err) {
+      cb(err);
+      return;
+    }
     $ = cheerio.load(body);
     var data = {docid: docid};
 
@@ -65,4 +76,3 @@ function cleanAmount(amount) {
   amount = parseFloat(amount.replace(',', '.'))
   return {amount: amount, currency: currency};
 }
-
