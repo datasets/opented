@@ -1,0 +1,13 @@
+{
+  "name": "opented-dataset-updater",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Updater dependencies for OpenTED dataset scripts",
+  "scripts": {
+    "update": "node scripts/scrape.js"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0-rc.12",
+    "request": "2.88.2"
+  }
+}
